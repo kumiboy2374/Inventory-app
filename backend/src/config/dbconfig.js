@@ -1,7 +1,6 @@
 const mongoose = require("mongoose")
 
-const MONGO_URI =
-	"mongodb+srv://sykumail04:kumail123@inventory-app.4wog6a7.mongodb.net/?retryWrites=true&w=majority&appName=inventory-app"
+const MONGO_URI = process.env.NEXT_MONGO_URI
 
 mongoose
 	.connect(MONGO_URI, {
