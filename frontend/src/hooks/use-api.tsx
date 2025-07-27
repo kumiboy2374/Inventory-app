@@ -14,6 +14,7 @@ export default function useApi() {
 			const res = await apiClient.request<T>({
 				method: config.method,
 				url: config.url,
+				data: config.data,
 			})
 
 			return res

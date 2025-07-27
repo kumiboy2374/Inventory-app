@@ -561,6 +561,35 @@ function Badge({ className, variant, ...props }) {
 }
 ;
 }}),
+"[project]/src/enum/module.ts [app-ssr] (ecmascript)": ((__turbopack_context__) => {
+"use strict";
+
+var { g: global, __dirname } = __turbopack_context__;
+{
+__turbopack_context__.s({
+    "MODULES": (()=>MODULES),
+    "formatModule": (()=>formatModule)
+});
+var MODULES = /*#__PURE__*/ function(MODULES) {
+    MODULES[MODULES["Creator_DivineGuidance"] = 1] = "Creator_DivineGuidance";
+    MODULES[MODULES["Rasulullah_Aimmah"] = 2] = "Rasulullah_Aimmah";
+    MODULES[MODULES["Ghaybah_SelfPurification"] = 3] = "Ghaybah_SelfPurification";
+    MODULES[MODULES["Wellbeing_Hereafter"] = 4] = "Wellbeing_Hereafter";
+    return MODULES;
+}({});
+const formatModule = (mod)=>{
+    switch(mod){
+        case 1:
+            return "1&2 - Creator And His Creation, Divine Guidance";
+        case 2:
+            return "3&4 - Rasulullah (SAW) Communcating The Message, A'immah (AS) Safeguarding The Message";
+        case 3:
+            return "5&6 - Upholding The Message During Ghaybah, Roadmap to Self-Purification";
+        case 4:
+            return "7&8 - Societal Wellbeing, The Hereafter - Return to The Creator";
+    }
+};
+}}),
 "[project]/src/components/dashboard/book-card.tsx [app-ssr] (ecmascript)": ((__turbopack_context__) => {
 "use strict";
 
@@ -581,7 +610,9 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$re
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$pencil$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Pencil$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/pencil.js [app-ssr] (ecmascript) <export default as Pencil>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$trash$2d$2$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Trash2$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/trash-2.js [app-ssr] (ecmascript) <export default as Trash2>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$dropdown$2d$menu$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/ui/dropdown-menu.tsx [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$enum$2f$module$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/enum/module.ts [app-ssr] (ecmascript)");
 "use client";
+;
 ;
 ;
 ;
@@ -606,35 +637,35 @@ function BookCard({ book, canManageBooks, onCheckoutClick, onCheckinClick, onEdi
                             "data-ai-hint": "book cover"
                         }, void 0, false, {
                             fileName: "[project]/src/components/dashboard/book-card.tsx",
-                            lineNumber: 26,
-                            columnNumber: 11
+                            lineNumber: 38,
+                            columnNumber: 6
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "absolute top-2 right-2 flex items-center gap-2",
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$badge$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Badge"], {
-                                variant: book.status === 'lent' ? 'destructive' : 'secondary',
+                                variant: book.status === "lent" ? "destructive" : "secondary",
                                 className: "capitalize",
                                 children: book.status
                             }, void 0, false, {
                                 fileName: "[project]/src/components/dashboard/book-card.tsx",
-                                lineNumber: 34,
-                                columnNumber: 13
+                                lineNumber: 46,
+                                columnNumber: 7
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/components/dashboard/book-card.tsx",
-                            lineNumber: 33,
-                            columnNumber: 12
+                            lineNumber: 45,
+                            columnNumber: 6
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/dashboard/book-card.tsx",
-                    lineNumber: 25,
-                    columnNumber: 9
+                    lineNumber: 37,
+                    columnNumber: 5
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/components/dashboard/book-card.tsx",
-                lineNumber: 24,
-                columnNumber: 7
+                lineNumber: 36,
+                columnNumber: 4
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["CardContent"], {
                 className: "p-4 flex-grow",
@@ -644,11 +675,11 @@ function BookCard({ book, canManageBooks, onCheckoutClick, onCheckinClick, onEdi
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["CardTitle"], {
                                 className: "text-lg font-headline mb-2 flex-1 pr-2",
-                                children: book.module
+                                children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$enum$2f$module$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["formatModule"])(Number(book.module))
                             }, void 0, false, {
                                 fileName: "[project]/src/components/dashboard/book-card.tsx",
-                                lineNumber: 42,
-                                columnNumber: 13
+                                lineNumber: 57,
+                                columnNumber: 6
                             }, this),
                             canManageBooks && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$dropdown$2d$menu$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["DropdownMenu"], {
                                 children: [
@@ -663,27 +694,27 @@ function BookCard({ book, canManageBooks, onCheckoutClick, onCheckinClick, onEdi
                                                     className: "h-4 w-4"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/dashboard/book-card.tsx",
-                                                    lineNumber: 47,
-                                                    columnNumber: 21
+                                                    lineNumber: 64,
+                                                    columnNumber: 10
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                     className: "sr-only",
                                                     children: "More options"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/dashboard/book-card.tsx",
-                                                    lineNumber: 48,
-                                                    columnNumber: 21
+                                                    lineNumber: 65,
+                                                    columnNumber: 10
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/components/dashboard/book-card.tsx",
-                                            lineNumber: 46,
-                                            columnNumber: 19
+                                            lineNumber: 63,
+                                            columnNumber: 9
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/dashboard/book-card.tsx",
-                                        lineNumber: 45,
-                                        columnNumber: 17
+                                        lineNumber: 62,
+                                        columnNumber: 8
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$dropdown$2d$menu$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["DropdownMenuContent"], {
                                         align: "end",
@@ -695,21 +726,21 @@ function BookCard({ book, canManageBooks, onCheckoutClick, onCheckinClick, onEdi
                                                         className: "mr-2 h-4 w-4"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/dashboard/book-card.tsx",
-                                                        lineNumber: 53,
-                                                        columnNumber: 21
+                                                        lineNumber: 70,
+                                                        columnNumber: 10
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                         children: "Edit"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/dashboard/book-card.tsx",
-                                                        lineNumber: 54,
-                                                        columnNumber: 21
+                                                        lineNumber: 71,
+                                                        columnNumber: 10
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/components/dashboard/book-card.tsx",
-                                                lineNumber: 52,
-                                                columnNumber: 19
+                                                lineNumber: 69,
+                                                columnNumber: 9
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$dropdown$2d$menu$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["DropdownMenuItem"], {
                                                 onClick: ()=>onDeleteClick(book),
@@ -719,39 +750,39 @@ function BookCard({ book, canManageBooks, onCheckoutClick, onCheckinClick, onEdi
                                                         className: "mr-2 h-4 w-4"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/dashboard/book-card.tsx",
-                                                        lineNumber: 57,
-                                                        columnNumber: 21
+                                                        lineNumber: 77,
+                                                        columnNumber: 10
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                         children: "Delete"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/dashboard/book-card.tsx",
-                                                        lineNumber: 58,
-                                                        columnNumber: 21
+                                                        lineNumber: 78,
+                                                        columnNumber: 10
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/components/dashboard/book-card.tsx",
-                                                lineNumber: 56,
-                                                columnNumber: 19
+                                                lineNumber: 73,
+                                                columnNumber: 9
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/components/dashboard/book-card.tsx",
-                                        lineNumber: 51,
-                                        columnNumber: 17
+                                        lineNumber: 68,
+                                        columnNumber: 8
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/dashboard/book-card.tsx",
-                                lineNumber: 44,
-                                columnNumber: 15
+                                lineNumber: 61,
+                                columnNumber: 7
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/dashboard/book-card.tsx",
-                        lineNumber: 41,
-                        columnNumber: 9
+                        lineNumber: 56,
+                        columnNumber: 5
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "text-sm text-muted-foreground space-y-1",
@@ -765,8 +796,8 @@ function BookCard({ book, canManageBooks, onCheckoutClick, onCheckinClick, onEdi
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/dashboard/book-card.tsx",
-                                lineNumber: 65,
-                                columnNumber: 11
+                                lineNumber: 85,
+                                columnNumber: 6
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                 children: [
@@ -775,8 +806,8 @@ function BookCard({ book, canManageBooks, onCheckoutClick, onCheckinClick, onEdi
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/dashboard/book-card.tsx",
-                                lineNumber: 66,
-                                columnNumber: 11
+                                lineNumber: 88,
+                                columnNumber: 6
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                 children: [
@@ -785,47 +816,47 @@ function BookCard({ book, canManageBooks, onCheckoutClick, onCheckinClick, onEdi
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/dashboard/book-card.tsx",
-                                lineNumber: 67,
-                                columnNumber: 11
+                                lineNumber: 89,
+                                columnNumber: 6
                             }, this),
-                            book.status === 'lent' && book.studentName && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            book.status === "lent" && book.studentName && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: "flex items-center pt-1 text-foreground",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$user$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__User$3e$__["User"], {
                                         className: "w-4 h-4 mr-2 text-muted-foreground"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/dashboard/book-card.tsx",
-                                        lineNumber: 70,
-                                        columnNumber: 15
+                                        lineNumber: 92,
+                                        columnNumber: 8
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
                                         children: book.studentName
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/dashboard/book-card.tsx",
-                                        lineNumber: 71,
-                                        columnNumber: 15
+                                        lineNumber: 93,
+                                        columnNumber: 8
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/dashboard/book-card.tsx",
-                                lineNumber: 69,
-                                columnNumber: 13
+                                lineNumber: 91,
+                                columnNumber: 7
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/dashboard/book-card.tsx",
-                        lineNumber: 64,
-                        columnNumber: 9
+                        lineNumber: 84,
+                        columnNumber: 5
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/dashboard/book-card.tsx",
-                lineNumber: 40,
-                columnNumber: 7
+                lineNumber: 55,
+                columnNumber: 4
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["CardFooter"], {
                 className: "p-4 pt-0",
-                children: book.status === 'available' ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
+                children: book.status === "available" ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
                     className: "w-full bg-accent text-accent-foreground hover:bg-accent/90",
                     onClick: ()=>onCheckoutClick(book),
                     children: [
@@ -833,15 +864,15 @@ function BookCard({ book, canManageBooks, onCheckoutClick, onCheckinClick, onEdi
                             className: "mr-2 h-4 w-4"
                         }, void 0, false, {
                             fileName: "[project]/src/components/dashboard/book-card.tsx",
-                            lineNumber: 79,
-                            columnNumber: 13
+                            lineNumber: 104,
+                            columnNumber: 7
                         }, this),
                         " Check Out"
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/dashboard/book-card.tsx",
-                    lineNumber: 78,
-                    columnNumber: 11
+                    lineNumber: 100,
+                    columnNumber: 6
                 }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
                     variant: "outline",
                     className: "w-full",
@@ -851,26 +882,26 @@ function BookCard({ book, canManageBooks, onCheckoutClick, onCheckinClick, onEdi
                             className: "mr-2 h-4 w-4"
                         }, void 0, false, {
                             fileName: "[project]/src/components/dashboard/book-card.tsx",
-                            lineNumber: 83,
-                            columnNumber: 13
+                            lineNumber: 108,
+                            columnNumber: 7
                         }, this),
                         " Check In"
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/dashboard/book-card.tsx",
-                    lineNumber: 82,
-                    columnNumber: 11
+                    lineNumber: 107,
+                    columnNumber: 6
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/components/dashboard/book-card.tsx",
-                lineNumber: 76,
-                columnNumber: 7
+                lineNumber: 98,
+                columnNumber: 4
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/components/dashboard/book-card.tsx",
-        lineNumber: 23,
-        columnNumber: 5
+        lineNumber: 35,
+        columnNumber: 3
     }, this);
 }
 }}),
@@ -894,7 +925,9 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$re
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$pencil$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Pencil$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/pencil.js [app-ssr] (ecmascript) <export default as Pencil>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$trash$2d$2$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Trash2$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/trash-2.js [app-ssr] (ecmascript) <export default as Trash2>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$dropdown$2d$menu$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/ui/dropdown-menu.tsx [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$enum$2f$module$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/enum/module.ts [app-ssr] (ecmascript)");
 "use client";
+;
 ;
 ;
 ;
@@ -918,24 +951,24 @@ function BookListItem({ book, canManageBooks, onCheckoutClick, onCheckinClick, o
                         "data-ai-hint": "book cover"
                     }, void 0, false, {
                         fileName: "[project]/src/components/dashboard/book-list-item.tsx",
-                        lineNumber: 26,
-                        columnNumber: 17
+                        lineNumber: 38,
+                        columnNumber: 6
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/src/components/dashboard/book-list-item.tsx",
-                    lineNumber: 25,
-                    columnNumber: 13
+                    lineNumber: 37,
+                    columnNumber: 5
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: "grid gap-1 flex-grow",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
                             className: "font-headline font-bold",
-                            children: book.module
+                            children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$enum$2f$module$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["formatModule"])(Number(book.module))
                         }, void 0, false, {
                             fileName: "[project]/src/components/dashboard/book-list-item.tsx",
-                            lineNumber: 35,
-                            columnNumber: 17
+                            lineNumber: 47,
+                            columnNumber: 6
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                             className: "text-sm text-muted-foreground",
@@ -951,18 +984,18 @@ function BookListItem({ book, canManageBooks, onCheckoutClick, onCheckinClick, o
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/dashboard/book-list-item.tsx",
-                            lineNumber: 36,
-                            columnNumber: 17
+                            lineNumber: 48,
+                            columnNumber: 6
                         }, this),
-                        book.status === 'lent' && book.studentName && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        book.status === "lent" && book.studentName && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "flex items-center text-sm text-foreground",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$user$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__User$3e$__["User"], {
                                     className: "w-3 h-3 mr-1.5 text-muted-foreground"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/dashboard/book-list-item.tsx",
-                                    lineNumber: 41,
-                                    columnNumber: 25
+                                    lineNumber: 54,
+                                    columnNumber: 8
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                     children: [
@@ -971,47 +1004,47 @@ function BookListItem({ book, canManageBooks, onCheckoutClick, onCheckinClick, o
                                             children: book.studentName
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/dashboard/book-list-item.tsx",
-                                            lineNumber: 42,
-                                            columnNumber: 40
+                                            lineNumber: 56,
+                                            columnNumber: 18
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/dashboard/book-list-item.tsx",
-                                    lineNumber: 42,
-                                    columnNumber: 25
+                                    lineNumber: 55,
+                                    columnNumber: 8
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/dashboard/book-list-item.tsx",
-                            lineNumber: 40,
-                            columnNumber: 21
+                            lineNumber: 53,
+                            columnNumber: 7
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/dashboard/book-list-item.tsx",
-                    lineNumber: 34,
-                    columnNumber: 13
+                    lineNumber: 46,
+                    columnNumber: 5
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: "flex items-center gap-4 ml-auto flex-shrink-0 w-full sm:w-auto pt-4 sm:pt-0 mt-4 sm:mt-0 border-t sm:border-none",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$badge$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Badge"], {
-                            variant: book.status === 'lent' ? 'destructive' : 'secondary',
+                            variant: book.status === "lent" ? "destructive" : "secondary",
                             className: "capitalize",
                             children: book.status
                         }, void 0, false, {
                             fileName: "[project]/src/components/dashboard/book-list-item.tsx",
-                            lineNumber: 47,
-                            columnNumber: 17
+                            lineNumber: 62,
+                            columnNumber: 6
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "flex-grow sm:flex-grow-0"
                         }, void 0, false, {
                             fileName: "[project]/src/components/dashboard/book-list-item.tsx",
-                            lineNumber: 48,
-                            columnNumber: 17
+                            lineNumber: 68,
+                            columnNumber: 6
                         }, this),
-                        book.status === 'available' ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
+                        book.status === "available" ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
                             size: "sm",
                             className: "bg-accent text-accent-foreground hover:bg-accent/90 w-full sm:w-auto",
                             onClick: ()=>onCheckoutClick(book),
@@ -1020,15 +1053,15 @@ function BookListItem({ book, canManageBooks, onCheckoutClick, onCheckinClick, o
                                     className: "mr-2 h-4 w-4"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/dashboard/book-list-item.tsx",
-                                    lineNumber: 51,
-                                    columnNumber: 25
+                                    lineNumber: 75,
+                                    columnNumber: 8
                                 }, this),
                                 " Check Out"
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/dashboard/book-list-item.tsx",
-                            lineNumber: 50,
-                            columnNumber: 21
+                            lineNumber: 70,
+                            columnNumber: 7
                         }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
                             size: "sm",
                             variant: "outline",
@@ -1039,15 +1072,15 @@ function BookListItem({ book, canManageBooks, onCheckoutClick, onCheckinClick, o
                                     className: "mr-2 h-4 w-4"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/dashboard/book-list-item.tsx",
-                                    lineNumber: 55,
-                                    columnNumber: 25
+                                    lineNumber: 84,
+                                    columnNumber: 8
                                 }, this),
                                 " Check In"
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/dashboard/book-list-item.tsx",
-                            lineNumber: 54,
-                            columnNumber: 21
+                            lineNumber: 78,
+                            columnNumber: 7
                         }, this),
                         canManageBooks && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$dropdown$2d$menu$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["DropdownMenu"], {
                             children: [
@@ -1062,27 +1095,27 @@ function BookListItem({ book, canManageBooks, onCheckoutClick, onCheckinClick, o
                                                 className: "h-4 w-4"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/dashboard/book-list-item.tsx",
-                                                lineNumber: 62,
-                                                columnNumber: 25
+                                                lineNumber: 91,
+                                                columnNumber: 10
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                 className: "sr-only",
                                                 children: "More options"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/dashboard/book-list-item.tsx",
-                                                lineNumber: 63,
-                                                columnNumber: 25
+                                                lineNumber: 92,
+                                                columnNumber: 10
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/components/dashboard/book-list-item.tsx",
-                                        lineNumber: 61,
-                                        columnNumber: 23
+                                        lineNumber: 90,
+                                        columnNumber: 9
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/dashboard/book-list-item.tsx",
-                                    lineNumber: 60,
-                                    columnNumber: 21
+                                    lineNumber: 89,
+                                    columnNumber: 8
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$dropdown$2d$menu$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["DropdownMenuContent"], {
                                     align: "end",
@@ -1094,21 +1127,21 @@ function BookListItem({ book, canManageBooks, onCheckoutClick, onCheckinClick, o
                                                     className: "mr-2 h-4 w-4"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/dashboard/book-list-item.tsx",
-                                                    lineNumber: 68,
-                                                    columnNumber: 25
+                                                    lineNumber: 97,
+                                                    columnNumber: 10
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                     children: "Edit"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/dashboard/book-list-item.tsx",
-                                                    lineNumber: 69,
-                                                    columnNumber: 25
+                                                    lineNumber: 98,
+                                                    columnNumber: 10
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/components/dashboard/book-list-item.tsx",
-                                            lineNumber: 67,
-                                            columnNumber: 23
+                                            lineNumber: 96,
+                                            columnNumber: 9
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$dropdown$2d$menu$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["DropdownMenuItem"], {
                                             onClick: ()=>onDeleteClick(book),
@@ -1118,50 +1151,50 @@ function BookListItem({ book, canManageBooks, onCheckoutClick, onCheckinClick, o
                                                     className: "mr-2 h-4 w-4"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/dashboard/book-list-item.tsx",
-                                                    lineNumber: 72,
-                                                    columnNumber: 25
+                                                    lineNumber: 104,
+                                                    columnNumber: 10
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                     children: "Delete"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/dashboard/book-list-item.tsx",
-                                                    lineNumber: 73,
-                                                    columnNumber: 25
+                                                    lineNumber: 105,
+                                                    columnNumber: 10
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/components/dashboard/book-list-item.tsx",
-                                            lineNumber: 71,
-                                            columnNumber: 23
+                                            lineNumber: 100,
+                                            columnNumber: 9
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/dashboard/book-list-item.tsx",
-                                    lineNumber: 66,
-                                    columnNumber: 21
+                                    lineNumber: 95,
+                                    columnNumber: 8
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/dashboard/book-list-item.tsx",
-                            lineNumber: 59,
-                            columnNumber: 19
+                            lineNumber: 88,
+                            columnNumber: 7
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/dashboard/book-list-item.tsx",
-                    lineNumber: 46,
-                    columnNumber: 13
+                    lineNumber: 61,
+                    columnNumber: 5
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/src/components/dashboard/book-list-item.tsx",
-            lineNumber: 24,
-            columnNumber: 9
+            lineNumber: 36,
+            columnNumber: 4
         }, this)
     }, void 0, false, {
         fileName: "[project]/src/components/dashboard/book-list-item.tsx",
-        lineNumber: 23,
-        columnNumber: 5
+        lineNumber: 35,
+        columnNumber: 3
     }, this);
 }
 }}),
@@ -1851,6 +1884,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$d
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$form$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/ui/form.tsx [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$input$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/ui/input.tsx [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/ui/select.tsx [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$enum$2f$module$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/enum/module.ts [app-ssr] (ecmascript)");
 "use client";
 ;
 ;
@@ -1862,25 +1896,30 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$s
 ;
 ;
 ;
+;
 const bookFormSchema = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zod$2f$lib$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["object"])({
-    module: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zod$2f$lib$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["string"])().min(1, 'Module name is required.'),
-    barcode: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zod$2f$lib$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["string"])().min(1, 'Barcode is required.'),
+    module: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zod$2f$lib$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["nativeEnum"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$enum$2f$module$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["MODULES"]),
+    barcode: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zod$2f$lib$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["string"])().min(1, "Barcode is required."),
     band: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zod$2f$lib$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["enum"])([
-        'A',
-        'B'
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
     ], {
-        required_error: 'Please select a band.'
+        required_error: "Please select a band."
     }),
-    lessonNumber: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zod$2f$lib$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["coerce"].number().min(1, 'Lesson number must be at least 1.'),
-    copyNumber: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zod$2f$lib$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["coerce"].number().min(1, 'Copy number must be at least 1.')
+    lessonNumber: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zod$2f$lib$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["coerce"].number().min(1, "Lesson number must be at least 1."),
+    copyNumber: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zod$2f$lib$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["coerce"].number().min(1, "Copy number must be at least 1.")
 });
 function BookFormDialog({ book, isOpen, onOpenChange, onSave }) {
     const form = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$hook$2d$form$2f$dist$2f$index$2e$esm$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useForm"])({
         resolver: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$hookform$2f$resolvers$2f$zod$2f$dist$2f$zod$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["zodResolver"])(bookFormSchema),
         defaultValues: {
-            module: '',
-            barcode: '',
-            band: 'A',
+            module: 1,
+            barcode: "",
+            band: "A",
             lessonNumber: 1,
             copyNumber: 1
         }
@@ -1896,9 +1935,9 @@ function BookFormDialog({ book, isOpen, onOpenChange, onSave }) {
             });
         } else {
             form.reset({
-                module: '',
-                barcode: '',
-                band: 'A',
+                module: 1,
+                barcode: "",
+                band: "A",
                 lessonNumber: 1,
                 copyNumber: 1
             });
@@ -1911,7 +1950,7 @@ function BookFormDialog({ book, isOpen, onOpenChange, onSave }) {
     const onSubmit = (data)=>{
         const newBookData = {
             id: book?.id || new Date().toISOString(),
-            status: book?.status || 'available',
+            status: book?.status || "available",
             studentName: book?.studentName,
             coverImage: book?.coverImage || `https://placehold.co/300x400.png`,
             ...data
@@ -1920,6 +1959,7 @@ function BookFormDialog({ book, isOpen, onOpenChange, onSave }) {
         onOpenChange(false);
     };
     const isEditing = book !== null;
+    const band = form.watch("band");
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$dialog$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Dialog"], {
         open: isOpen,
         onOpenChange: onOpenChange,
@@ -1930,24 +1970,24 @@ function BookFormDialog({ book, isOpen, onOpenChange, onSave }) {
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$dialog$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["DialogTitle"], {
                             className: "font-headline",
-                            children: isEditing ? 'Edit Book' : 'Add New Book'
+                            children: isEditing ? "Edit Book" : "Add New Book"
                         }, void 0, false, {
                             fileName: "[project]/src/components/dashboard/book-form-dialog.tsx",
-                            lineNumber: 83,
-                            columnNumber: 11
+                            lineNumber: 105,
+                            columnNumber: 6
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$dialog$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["DialogDescription"], {
-                            children: isEditing ? 'Update the details of this book.' : 'Fill in the details for the new book.'
+                            children: isEditing ? "Update the details of this book." : "Fill in the details for the new book."
                         }, void 0, false, {
                             fileName: "[project]/src/components/dashboard/book-form-dialog.tsx",
-                            lineNumber: 84,
-                            columnNumber: 11
+                            lineNumber: 108,
+                            columnNumber: 6
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/dashboard/book-form-dialog.tsx",
-                    lineNumber: 82,
-                    columnNumber: 9
+                    lineNumber: 104,
+                    columnNumber: 5
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$form$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Form"], {
                     ...form,
@@ -1964,38 +2004,93 @@ function BookFormDialog({ book, isOpen, onOpenChange, onSave }) {
                                                 children: "Module"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/dashboard/book-form-dialog.tsx",
-                                                lineNumber: 95,
-                                                columnNumber: 19
+                                                lineNumber: 121,
+                                                columnNumber: 10
                                             }, void 0),
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$form$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["FormControl"], {
-                                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$input$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Input"], {
-                                                    placeholder: "e.g. Phonics Fun",
-                                                    ...field
-                                                }, void 0, false, {
-                                                    fileName: "[project]/src/components/dashboard/book-form-dialog.tsx",
-                                                    lineNumber: 97,
-                                                    columnNumber: 21
-                                                }, void 0)
-                                            }, void 0, false, {
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Select"], {
+                                                onValueChange: (v)=>field.onChange(Number(v)),
+                                                defaultValue: String(field.value),
+                                                children: [
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$form$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["FormControl"], {
+                                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["SelectTrigger"], {
+                                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["SelectValue"], {
+                                                                placeholder: "Select module"
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/src/components/dashboard/book-form-dialog.tsx",
+                                                                lineNumber: 128,
+                                                                columnNumber: 13
+                                                            }, void 0)
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/src/components/dashboard/book-form-dialog.tsx",
+                                                            lineNumber: 127,
+                                                            columnNumber: 12
+                                                        }, void 0)
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/src/components/dashboard/book-form-dialog.tsx",
+                                                        lineNumber: 126,
+                                                        columnNumber: 11
+                                                    }, void 0),
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["SelectContent"], {
+                                                        children: [
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["SelectItem"], {
+                                                                value: "1",
+                                                                children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$enum$2f$module$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["formatModule"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$enum$2f$module$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["MODULES"].Creator_DivineGuidance)
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/src/components/dashboard/book-form-dialog.tsx",
+                                                                lineNumber: 132,
+                                                                columnNumber: 12
+                                                            }, void 0),
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["SelectItem"], {
+                                                                value: "2",
+                                                                children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$enum$2f$module$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["formatModule"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$enum$2f$module$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["MODULES"].Rasulullah_Aimmah)
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/src/components/dashboard/book-form-dialog.tsx",
+                                                                lineNumber: 135,
+                                                                columnNumber: 12
+                                                            }, void 0),
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["SelectItem"], {
+                                                                value: "3",
+                                                                children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$enum$2f$module$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["formatModule"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$enum$2f$module$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["MODULES"].Ghaybah_SelfPurification)
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/src/components/dashboard/book-form-dialog.tsx",
+                                                                lineNumber: 136,
+                                                                columnNumber: 12
+                                                            }, void 0),
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["SelectItem"], {
+                                                                value: "4",
+                                                                children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$enum$2f$module$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["formatModule"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$enum$2f$module$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["MODULES"].Wellbeing_Hereafter)
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/src/components/dashboard/book-form-dialog.tsx",
+                                                                lineNumber: 139,
+                                                                columnNumber: 12
+                                                            }, void 0)
+                                                        ]
+                                                    }, void 0, true, {
+                                                        fileName: "[project]/src/components/dashboard/book-form-dialog.tsx",
+                                                        lineNumber: 131,
+                                                        columnNumber: 11
+                                                    }, void 0)
+                                                ]
+                                            }, void 0, true, {
                                                 fileName: "[project]/src/components/dashboard/book-form-dialog.tsx",
-                                                lineNumber: 96,
-                                                columnNumber: 19
+                                                lineNumber: 122,
+                                                columnNumber: 10
                                             }, void 0),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$form$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["FormMessage"], {}, void 0, false, {
                                                 fileName: "[project]/src/components/dashboard/book-form-dialog.tsx",
-                                                lineNumber: 99,
-                                                columnNumber: 19
+                                                lineNumber: 142,
+                                                columnNumber: 10
                                             }, void 0)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/components/dashboard/book-form-dialog.tsx",
-                                        lineNumber: 94,
-                                        columnNumber: 17
+                                        lineNumber: 120,
+                                        columnNumber: 9
                                     }, void 0)
                             }, void 0, false, {
                                 fileName: "[project]/src/components/dashboard/book-form-dialog.tsx",
-                                lineNumber: 90,
-                                columnNumber: 13
+                                lineNumber: 116,
+                                columnNumber: 7
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$form$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["FormField"], {
                                 control: form.control,
@@ -2006,8 +2101,8 @@ function BookFormDialog({ book, isOpen, onOpenChange, onSave }) {
                                                 children: "Barcode"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/dashboard/book-form-dialog.tsx",
-                                                lineNumber: 108,
-                                                columnNumber: 19
+                                                lineNumber: 151,
+                                                columnNumber: 10
                                             }, void 0),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$form$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["FormControl"], {
                                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$input$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Input"], {
@@ -2015,29 +2110,29 @@ function BookFormDialog({ book, isOpen, onOpenChange, onSave }) {
                                                     ...field
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/dashboard/book-form-dialog.tsx",
-                                                    lineNumber: 110,
-                                                    columnNumber: 21
+                                                    lineNumber: 153,
+                                                    columnNumber: 11
                                                 }, void 0)
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/dashboard/book-form-dialog.tsx",
-                                                lineNumber: 109,
-                                                columnNumber: 19
+                                                lineNumber: 152,
+                                                columnNumber: 10
                                             }, void 0),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$form$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["FormMessage"], {}, void 0, false, {
                                                 fileName: "[project]/src/components/dashboard/book-form-dialog.tsx",
-                                                lineNumber: 112,
-                                                columnNumber: 19
+                                                lineNumber: 155,
+                                                columnNumber: 10
                                             }, void 0)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/components/dashboard/book-form-dialog.tsx",
-                                        lineNumber: 107,
-                                        columnNumber: 17
+                                        lineNumber: 150,
+                                        columnNumber: 9
                                     }, void 0)
                             }, void 0, false, {
                                 fileName: "[project]/src/components/dashboard/book-form-dialog.tsx",
-                                lineNumber: 103,
-                                columnNumber: 13
+                                lineNumber: 146,
+                                columnNumber: 7
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: "grid grid-cols-3 gap-4",
@@ -2051,8 +2146,8 @@ function BookFormDialog({ book, isOpen, onOpenChange, onSave }) {
                                                         children: "Band"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/dashboard/book-form-dialog.tsx",
-                                                        lineNumber: 122,
-                                                        columnNumber: 21
+                                                        lineNumber: 165,
+                                                        columnNumber: 11
                                                     }, void 0),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Select"], {
                                                         onValueChange: field.onChange,
@@ -2064,18 +2159,18 @@ function BookFormDialog({ book, isOpen, onOpenChange, onSave }) {
                                                                         placeholder: "Select band"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/components/dashboard/book-form-dialog.tsx",
-                                                                        lineNumber: 126,
-                                                                        columnNumber: 27
+                                                                        lineNumber: 169,
+                                                                        columnNumber: 14
                                                                     }, void 0)
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/src/components/dashboard/book-form-dialog.tsx",
-                                                                    lineNumber: 125,
-                                                                    columnNumber: 25
+                                                                    lineNumber: 168,
+                                                                    columnNumber: 13
                                                                 }, void 0)
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/components/dashboard/book-form-dialog.tsx",
-                                                                lineNumber: 124,
-                                                                columnNumber: 23
+                                                                lineNumber: 167,
+                                                                columnNumber: 12
                                                             }, void 0),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["SelectContent"], {
                                                                 children: [
@@ -2084,56 +2179,89 @@ function BookFormDialog({ book, isOpen, onOpenChange, onSave }) {
                                                                         children: "A"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/components/dashboard/book-form-dialog.tsx",
-                                                                        lineNumber: 130,
-                                                                        columnNumber: 25
+                                                                        lineNumber: 173,
+                                                                        columnNumber: 13
                                                                     }, void 0),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["SelectItem"], {
                                                                         value: "B",
                                                                         children: "B"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/components/dashboard/book-form-dialog.tsx",
-                                                                        lineNumber: 131,
-                                                                        columnNumber: 25
+                                                                        lineNumber: 174,
+                                                                        columnNumber: 13
+                                                                    }, void 0),
+                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["SelectItem"], {
+                                                                        value: "C",
+                                                                        children: "C"
+                                                                    }, void 0, false, {
+                                                                        fileName: "[project]/src/components/dashboard/book-form-dialog.tsx",
+                                                                        lineNumber: 175,
+                                                                        columnNumber: 13
+                                                                    }, void 0),
+                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["SelectItem"], {
+                                                                        value: "D",
+                                                                        children: "D"
+                                                                    }, void 0, false, {
+                                                                        fileName: "[project]/src/components/dashboard/book-form-dialog.tsx",
+                                                                        lineNumber: 176,
+                                                                        columnNumber: 13
+                                                                    }, void 0),
+                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["SelectItem"], {
+                                                                        value: "E",
+                                                                        children: "E"
+                                                                    }, void 0, false, {
+                                                                        fileName: "[project]/src/components/dashboard/book-form-dialog.tsx",
+                                                                        lineNumber: 177,
+                                                                        columnNumber: 13
+                                                                    }, void 0),
+                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$select$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["SelectItem"], {
+                                                                        value: "F",
+                                                                        children: "F"
+                                                                    }, void 0, false, {
+                                                                        fileName: "[project]/src/components/dashboard/book-form-dialog.tsx",
+                                                                        lineNumber: 178,
+                                                                        columnNumber: 13
                                                                     }, void 0)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/src/components/dashboard/book-form-dialog.tsx",
-                                                                lineNumber: 129,
-                                                                columnNumber: 23
+                                                                lineNumber: 172,
+                                                                columnNumber: 12
                                                             }, void 0)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/src/components/dashboard/book-form-dialog.tsx",
-                                                        lineNumber: 123,
-                                                        columnNumber: 22
+                                                        lineNumber: 166,
+                                                        columnNumber: 11
                                                     }, void 0),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$form$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["FormMessage"], {}, void 0, false, {
                                                         fileName: "[project]/src/components/dashboard/book-form-dialog.tsx",
-                                                        lineNumber: 134,
-                                                        columnNumber: 21
+                                                        lineNumber: 181,
+                                                        columnNumber: 11
                                                     }, void 0)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/components/dashboard/book-form-dialog.tsx",
-                                                lineNumber: 121,
-                                                columnNumber: 19
+                                                lineNumber: 164,
+                                                columnNumber: 10
                                             }, void 0)
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/dashboard/book-form-dialog.tsx",
-                                        lineNumber: 117,
-                                        columnNumber: 15
+                                        lineNumber: 160,
+                                        columnNumber: 8
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$form$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["FormField"], {
                                         control: form.control,
                                         name: "lessonNumber",
-                                        render: ({ field })=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$form$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["FormItem"], {
+                                        render: ({ field })=>{
+                                            return band === "A" || band === "B" ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$form$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["FormItem"], {
                                                 children: [
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$form$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["FormLabel"], {
                                                         children: "Lesson"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/dashboard/book-form-dialog.tsx",
-                                                        lineNumber: 143,
-                                                        columnNumber: 21
+                                                        lineNumber: 192,
+                                                        columnNumber: 12
                                                     }, void 0),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$form$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["FormControl"], {
                                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$input$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Input"], {
@@ -2141,29 +2269,30 @@ function BookFormDialog({ book, isOpen, onOpenChange, onSave }) {
                                                             ...field
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/dashboard/book-form-dialog.tsx",
-                                                            lineNumber: 145,
-                                                            columnNumber: 23
+                                                            lineNumber: 194,
+                                                            columnNumber: 13
                                                         }, void 0)
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/dashboard/book-form-dialog.tsx",
-                                                        lineNumber: 144,
-                                                        columnNumber: 21
+                                                        lineNumber: 193,
+                                                        columnNumber: 12
                                                     }, void 0),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$form$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["FormMessage"], {}, void 0, false, {
                                                         fileName: "[project]/src/components/dashboard/book-form-dialog.tsx",
-                                                        lineNumber: 147,
-                                                        columnNumber: 21
+                                                        lineNumber: 196,
+                                                        columnNumber: 12
                                                     }, void 0)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/components/dashboard/book-form-dialog.tsx",
-                                                lineNumber: 142,
-                                                columnNumber: 19
-                                            }, void 0)
+                                                lineNumber: 191,
+                                                columnNumber: 11
+                                            }, void 0) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Fragment"], {}, void 0, false);
+                                        }
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/dashboard/book-form-dialog.tsx",
-                                        lineNumber: 138,
-                                        columnNumber: 15
+                                        lineNumber: 186,
+                                        columnNumber: 8
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$form$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["FormField"], {
                                         control: form.control,
@@ -2174,8 +2303,8 @@ function BookFormDialog({ book, isOpen, onOpenChange, onSave }) {
                                                         children: "Copy"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/dashboard/book-form-dialog.tsx",
-                                                        lineNumber: 156,
-                                                        columnNumber: 21
+                                                        lineNumber: 208,
+                                                        columnNumber: 11
                                                     }, void 0),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$form$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["FormControl"], {
                                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$input$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Input"], {
@@ -2183,35 +2312,35 @@ function BookFormDialog({ book, isOpen, onOpenChange, onSave }) {
                                                             ...field
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/dashboard/book-form-dialog.tsx",
-                                                            lineNumber: 158,
-                                                            columnNumber: 23
+                                                            lineNumber: 210,
+                                                            columnNumber: 12
                                                         }, void 0)
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/dashboard/book-form-dialog.tsx",
-                                                        lineNumber: 157,
-                                                        columnNumber: 21
+                                                        lineNumber: 209,
+                                                        columnNumber: 11
                                                     }, void 0),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$form$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["FormMessage"], {}, void 0, false, {
                                                         fileName: "[project]/src/components/dashboard/book-form-dialog.tsx",
-                                                        lineNumber: 160,
-                                                        columnNumber: 21
+                                                        lineNumber: 212,
+                                                        columnNumber: 11
                                                     }, void 0)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/components/dashboard/book-form-dialog.tsx",
-                                                lineNumber: 155,
-                                                columnNumber: 19
+                                                lineNumber: 207,
+                                                columnNumber: 10
                                             }, void 0)
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/dashboard/book-form-dialog.tsx",
-                                        lineNumber: 151,
-                                        columnNumber: 15
+                                        lineNumber: 203,
+                                        columnNumber: 8
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/dashboard/book-form-dialog.tsx",
-                                lineNumber: 116,
-                                columnNumber: 13
+                                lineNumber: 159,
+                                columnNumber: 7
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$dialog$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["DialogFooter"], {
                                 className: "pt-4",
@@ -2223,8 +2352,8 @@ function BookFormDialog({ book, isOpen, onOpenChange, onSave }) {
                                         children: "Cancel"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/dashboard/book-form-dialog.tsx",
-                                        lineNumber: 166,
-                                        columnNumber: 15
+                                        lineNumber: 218,
+                                        columnNumber: 8
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
                                         type: "submit",
@@ -2232,36 +2361,36 @@ function BookFormDialog({ book, isOpen, onOpenChange, onSave }) {
                                         children: "Save"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/dashboard/book-form-dialog.tsx",
-                                        lineNumber: 167,
-                                        columnNumber: 15
+                                        lineNumber: 221,
+                                        columnNumber: 8
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/dashboard/book-form-dialog.tsx",
-                                lineNumber: 165,
-                                columnNumber: 13
+                                lineNumber: 217,
+                                columnNumber: 7
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/dashboard/book-form-dialog.tsx",
-                        lineNumber: 89,
-                        columnNumber: 11
+                        lineNumber: 115,
+                        columnNumber: 6
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/src/components/dashboard/book-form-dialog.tsx",
-                    lineNumber: 88,
-                    columnNumber: 9
+                    lineNumber: 114,
+                    columnNumber: 5
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/src/components/dashboard/book-form-dialog.tsx",
-            lineNumber: 81,
-            columnNumber: 7
+            lineNumber: 103,
+            columnNumber: 4
         }, this)
     }, void 0, false, {
         fileName: "[project]/src/components/dashboard/book-form-dialog.tsx",
-        lineNumber: 80,
-        columnNumber: 5
+        lineNumber: 102,
+        columnNumber: 3
     }, this);
 }
 }}),
@@ -2677,7 +2806,8 @@ function useApi() {
         try {
             const res = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$api$2f$apiClient$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].request({
                 method: config.method,
-                url: config.url
+                url: config.url,
+                data: config.data
             });
             return res;
         } catch (e) {
@@ -2741,15 +2871,21 @@ function DashboardPage() {
     // API
     const bookApi = (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$hooks$2f$use$2d$api$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"])();
     const addBook = (bookData)=>{
+        console.log("Save id:", bookData.id);
         const res = bookApi.request({
             method: "POST",
             url: "/books/add-book",
+            data: bookData
+        });
+        return res;
+    };
+    const deleteBook = async (bookId)=>{
+        console.log("Frontend book id:", bookId);
+        const res = await bookApi.request({
+            method: "DELETE",
+            url: "/books/delete-book",
             data: {
-                module: bookData.module,
-                barcode: bookData.barcode,
-                band: bookData.band,
-                lessonNumber: bookData.lessonNumber,
-                copyNumber: bookData.copyNumber
+                id: bookId
             }
         });
         return res;
@@ -2771,6 +2907,7 @@ function DashboardPage() {
         setTimeout(()=>setIsLoading(false), 500);
     }, []);
     const handleSaveBook = (bookData)=>{
+        console.log("Received in handleSaveBook:", bookData);
         if (editingBook) {
             // Editing existing book
             setBooks((prevBooks)=>prevBooks.map((b)=>b.id === bookData.id ? bookData : b));
@@ -2794,6 +2931,7 @@ function DashboardPage() {
     };
     const handleDeleteBook = (bookId)=>{
         const bookToDelete = books.find((b)=>b.id === bookId);
+        deleteBook(bookId);
         setBooks((prevBooks)=>prevBooks.filter((b)=>b.id !== bookId));
         toast({
             title: "Success!",
@@ -2833,7 +2971,7 @@ function DashboardPage() {
         }
         if (!searchQuery) return booksToFilter;
         const lowercasedQuery = searchQuery.toLowerCase();
-        return booksToFilter.filter((book)=>book.barcode.toLowerCase().includes(lowercasedQuery) || book.band.toLowerCase().includes(lowercasedQuery) || book.module.toLowerCase().includes(lowercasedQuery) || book.lessonNumber.toString().includes(lowercasedQuery) || book.copyNumber.toString().includes(lowercasedQuery) || book.studentName?.toLowerCase().includes(lowercasedQuery));
+        return booksToFilter.filter((book)=>book.barcode.toLowerCase().includes(lowercasedQuery) || book.band.toLowerCase().includes(lowercasedQuery) || book.module.toString().includes(lowercasedQuery) || book.lessonNumber.toString().includes(lowercasedQuery) || book.copyNumber.toString().includes(lowercasedQuery) || book.studentName?.toLowerCase().includes(lowercasedQuery));
     }, [
         books,
         searchQuery,
@@ -2865,27 +3003,27 @@ function DashboardPage() {
                             className: "h-[108px] w-full"
                         }, void 0, false, {
                             fileName: "[project]/src/app/dashboard/page.tsx",
-                            lineNumber: 144,
+                            lineNumber: 152,
                             columnNumber: 6
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$skeleton$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Skeleton"], {
                             className: "h-[108px] w-full"
                         }, void 0, false, {
                             fileName: "[project]/src/app/dashboard/page.tsx",
-                            lineNumber: 145,
+                            lineNumber: 153,
                             columnNumber: 6
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/dashboard/page.tsx",
-                    lineNumber: 143,
+                    lineNumber: 151,
                     columnNumber: 5
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$skeleton$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Skeleton"], {
                     className: "h-10 w-full"
                 }, void 0, false, {
                     fileName: "[project]/src/app/dashboard/page.tsx",
-                    lineNumber: 147,
+                    lineNumber: 155,
                     columnNumber: 5
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2896,18 +3034,18 @@ function DashboardPage() {
                             className: "h-[350px] w-full rounded-lg"
                         }, i, false, {
                             fileName: "[project]/src/app/dashboard/page.tsx",
-                            lineNumber: 150,
+                            lineNumber: 158,
                             columnNumber: 7
                         }, this))
                 }, void 0, false, {
                     fileName: "[project]/src/app/dashboard/page.tsx",
-                    lineNumber: 148,
+                    lineNumber: 156,
                     columnNumber: 5
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/src/app/dashboard/page.tsx",
-            lineNumber: 142,
+            lineNumber: 150,
             columnNumber: 4
         }, this);
     }
@@ -2919,7 +3057,7 @@ function DashboardPage() {
                 visibleBands: visibleBands
             }, void 0, false, {
                 fileName: "[project]/src/app/dashboard/page.tsx",
-                lineNumber: 159,
+                lineNumber: 167,
                 columnNumber: 4
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$dashboard$2f$filter$2d$controls$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["FilterControls"], {
@@ -2931,7 +3069,7 @@ function DashboardPage() {
                 onAddBookClick: ()=>setEditingBook(null)
             }, void 0, false, {
                 fileName: "[project]/src/app/dashboard/page.tsx",
-                lineNumber: 161,
+                lineNumber: 169,
                 columnNumber: 4
             }, this),
             filteredBooks.length > 0 ? layout === "grid" ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2945,12 +3083,12 @@ function DashboardPage() {
                         onDeleteClick: ()=>setDeletingBook(book)
                     }, book.id, false, {
                         fileName: "[project]/src/app/dashboard/page.tsx",
-                        lineNumber: 174,
+                        lineNumber: 182,
                         columnNumber: 8
                     }, this))
             }, void 0, false, {
                 fileName: "[project]/src/app/dashboard/page.tsx",
-                lineNumber: 172,
+                lineNumber: 180,
                 columnNumber: 6
             }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "space-y-4",
@@ -2963,12 +3101,12 @@ function DashboardPage() {
                         onDeleteClick: ()=>setDeletingBook(book)
                     }, book.id, false, {
                         fileName: "[project]/src/app/dashboard/page.tsx",
-                        lineNumber: 188,
+                        lineNumber: 196,
                         columnNumber: 8
                     }, this))
             }, void 0, false, {
                 fileName: "[project]/src/app/dashboard/page.tsx",
-                lineNumber: 186,
+                lineNumber: 194,
                 columnNumber: 6
             }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "flex flex-col items-center justify-center rounded-xl border-2 border-dashed border-muted-foreground/30 bg-muted/50 text-center py-16 text-muted-foreground",
@@ -2977,7 +3115,7 @@ function DashboardPage() {
                         className: "h-12 w-12 mb-4"
                     }, void 0, false, {
                         fileName: "[project]/src/app/dashboard/page.tsx",
-                        lineNumber: 202,
+                        lineNumber: 210,
                         columnNumber: 6
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -2985,20 +3123,20 @@ function DashboardPage() {
                         children: "No books found"
                     }, void 0, false, {
                         fileName: "[project]/src/app/dashboard/page.tsx",
-                        lineNumber: 203,
+                        lineNumber: 211,
                         columnNumber: 6
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                         children: "Try adjusting your search query."
                     }, void 0, false, {
                         fileName: "[project]/src/app/dashboard/page.tsx",
-                        lineNumber: 204,
+                        lineNumber: 212,
                         columnNumber: 6
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/dashboard/page.tsx",
-                lineNumber: 201,
+                lineNumber: 209,
                 columnNumber: 5
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$dashboard$2f$checkout$2d$dialog$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["CheckoutDialog"], {
@@ -3008,7 +3146,7 @@ function DashboardPage() {
                 onCheckout: handleCheckout
             }, void 0, false, {
                 fileName: "[project]/src/app/dashboard/page.tsx",
-                lineNumber: 208,
+                lineNumber: 216,
                 columnNumber: 4
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$dashboard$2f$book$2d$form$2d$dialog$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["BookFormDialog"], {
@@ -3018,7 +3156,7 @@ function DashboardPage() {
                 onSave: handleSaveBook
             }, void 0, false, {
                 fileName: "[project]/src/app/dashboard/page.tsx",
-                lineNumber: 215,
+                lineNumber: 223,
                 columnNumber: 4
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$dashboard$2f$delete$2d$book$2d$dialog$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["DeleteBookDialog"], {
@@ -3028,13 +3166,13 @@ function DashboardPage() {
                 onConfirm: handleDeleteBook
             }, void 0, false, {
                 fileName: "[project]/src/app/dashboard/page.tsx",
-                lineNumber: 222,
+                lineNumber: 230,
                 columnNumber: 4
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/dashboard/page.tsx",
-        lineNumber: 158,
+        lineNumber: 166,
         columnNumber: 3
     }, this);
 }
@@ -3042,4 +3180,4 @@ function DashboardPage() {
 
 };
 
-//# sourceMappingURL=%5Broot-of-the-server%5D__ae4bdb9c._.js.map
+//# sourceMappingURL=%5Broot-of-the-server%5D__6e0d29a2._.js.map

@@ -109,6 +109,24 @@ app.get("/api/books", async (_req, res) => {
 	}
 })
 
+app.delete("/api/books/delete-book", async (req, res) => {
+	console.log("Deleting book:", req.body)
+	try {
+		const bookId = req.body.id
+
+		if (!bookId) return res.status(400).json({ error: "Book ID is required" })
+
+		const deletedBook = await book.findByIdAndDelete(bookId)
+
+		if (!deletedBook) return res.status(404).json({ error: "Book not found" })
+
+		res.json({ message: "Book deleted successfully", book: deletedBook })
+	} catch (e) {
+		console.error("Error deleting book:", e)
+		res.status(500).json({ error: "Server error" })
+	}
+})
+
 const PORT = process.env.PORT || 3000
 app.listen(PORT, () => {
 	console.log(`Server running on http://localhost:${PORT}`)

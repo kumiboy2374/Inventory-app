@@ -29,19 +29,30 @@ export default function DashboardPage() {
 	const bookApi = useApi()
 
 	const addBook = (bookData: Book) => {
+		console.log("Save id:", bookData._id)
 		const res = bookApi.request({
 			method: "POST",
 			url: "/books/add-book",
-			data: {
-				module: bookData.module,
-				barcode: bookData.barcode,
-				band: bookData.band,
-				lessonNumber: bookData.lessonNumber,
-				copyNumber: bookData.copyNumber,
-			},
+			data: bookData,
 		})
 
 		return res
+	}
+
+	const deleteBook = async (bookId: string) => {
+		console.log("Frontend book id:", bookId)
+		const res = await bookApi.request({
+			method: "DELETE",
+			url: "/books/delete-book",
+			data: { id: bookId },
+		})
+
+		return res
+	}
+
+	async function fetchBooks() {
+		const res = await bookApi.request({ method: "GET", url: "/books" })
+		setBooks(res.data)
 	}
 
 	const { toast } = useToast()
@@ -52,19 +63,16 @@ export default function DashboardPage() {
 			setUser(JSON.parse(storedUser))
 		}
 
-		async function fetchBooks() {
-			const res = await bookApi.request({ method: "GET", url: "/books" })
-			setBooks(res.data)
-		}
 		fetchBooks()
 
 		setTimeout(() => setIsLoading(false), 500)
 	}, [])
 
 	const handleSaveBook = (bookData: Book) => {
+		console.log("Received in handleSaveBook:", bookData)
 		if (editingBook) {
 			// Editing existing book
-			setBooks((prevBooks) => prevBooks.map((b) => (b.id === bookData.id ? bookData : b)))
+			setBooks((prevBooks) => prevBooks.map((b) => (b._id === bookData._id ? bookData : b)))
 			toast({ title: "Success!", description: "Book has been updated." })
 		} else {
 			// Adding new book
@@ -76,19 +84,33 @@ export default function DashboardPage() {
 	}
 
 	const handleDeleteBook = (bookId: string) => {
-		const bookToDelete = books.find((b) => b.id === bookId)
-		setBooks((prevBooks) => prevBooks.filter((b) => b.id !== bookId))
-		toast({
-			title: "Success!",
-			description: `"${bookToDelete?.module}" has been deleted.`,
-		})
-		setDeletingBook(null)
+		const bookToDelete = books.find((b) => b._id === bookId) || deletingBook
+
+		console.log(bookToDelete)
+		console.log("Book id:", bookToDelete?._id)
+		if (!bookToDelete) {
+			console.error("Book not found")
+			return
+		}
+
+		// Call async but don’t return the promise — just handle it
+		deleteBook(bookToDelete._id)
+			.then(() => {
+				setBooks((prevBooks) => prevBooks.filter((b) => b._id !== bookId))
+				toast({ title: "Success!", description: `"${bookToDelete.module}" has been deleted.` })
+				setDeletingBook(null)
+				fetchBooks()
+			})
+			.catch((error) => {
+				console.error(error)
+				toast({ title: "Error", description: "Failed to delete book.", variant: "destructive" })
+			})
 	}
 
 	const handleCheckout = (bookId: string, studentName: string) => {
 		setBooks((prevBooks) =>
 			prevBooks.map((b) =>
-				b.id === bookId ? { ...b, status: "lent", studentName: studentName } : b
+				b._id === bookId ? { ...b, status: "lent", studentName: studentName } : b
 			)
 		)
 		toast({
@@ -98,10 +120,10 @@ export default function DashboardPage() {
 	}
 
 	const handleCheckin = (bookId: string) => {
-		const bookToCheckIn = books.find((b) => b.id === bookId)
+		const bookToCheckIn = books.find((b) => b._id === bookId) || checkoutBook
 		setBooks((prevBooks) =>
 			prevBooks.map((b) =>
-				b.id === bookId ? { ...b, status: "available", studentName: undefined } : b
+				b._id === bookId ? { ...b, status: "available", studentName: undefined } : b
 			)
 		)
 		toast({
@@ -123,7 +145,7 @@ export default function DashboardPage() {
 			(book) =>
 				book.barcode.toLowerCase().includes(lowercasedQuery) ||
 				book.band.toLowerCase().includes(lowercasedQuery) ||
-				book.module.toLowerCase().includes(lowercasedQuery) ||
+				book.module.toString().includes(lowercasedQuery) ||
 				book.lessonNumber.toString().includes(lowercasedQuery) ||
 				book.copyNumber.toString().includes(lowercasedQuery) ||
 				book.studentName?.toLowerCase().includes(lowercasedQuery)
@@ -172,7 +194,7 @@ export default function DashboardPage() {
 					<div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6'>
 						{filteredBooks.map((book) => (
 							<BookCard
-								key={book.id}
+								key={book._id}
 								book={book}
 								canManageBooks={user?.role === "main"}
 								onCheckoutClick={() => setCheckoutBook(book)}
@@ -186,7 +208,7 @@ export default function DashboardPage() {
 					<div className='space-y-4'>
 						{filteredBooks.map((book) => (
 							<BookListItem
-								key={book.id}
+								key={book._id}
 								book={book}
 								canManageBooks={user?.role === "main"}
 								onCheckoutClick={() => setCheckoutBook(book)}

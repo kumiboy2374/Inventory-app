@@ -2,6 +2,7 @@ const mongoose = require("../config/dbconfig")
 
 const bookSchema = new mongoose.Schema(
 	{
+		_id: { type: String, required: true },
 		module: { type: String, required: true },
 		band: { type: String, required: true },
 		barcode: { type: String, required: true },

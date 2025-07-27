@@ -1,6 +1,8 @@
+import { MODULES } from "@/enum/module"
+
 export type Book = {
-	id: string
-	module: string
+	_id: string
+	module: MODULES
 	barcode: string
 	band: "A" | "B" | "C" | "D" | "E" | "F"
 	copyNumber: number
