@@ -44,7 +44,7 @@ export function BookCard({
 					/>
 					<div className='absolute top-2 right-2 flex items-center gap-2'>
 						<Badge
-							variant={book.status === "lent" ? "destructive" : "secondary"}
+							variant={book.status === false ? "destructive" : "secondary"}
 							className='capitalize'
 						>
 							{book.status}
@@ -87,7 +87,7 @@ export function BookCard({
 					</p>
 					<p>Band: {book.band}</p>
 					<p>Barcode: {book.barcode}</p>
-					{book.status === "lent" && book.studentName && (
+					{book.status === false && book.studentName && (
 						<div className='flex items-center pt-1 text-foreground'>
 							<User className='w-4 h-4 mr-2 text-muted-foreground' />
 							<strong>{book.studentName}</strong>
@@ -96,7 +96,7 @@ export function BookCard({
 				</div>
 			</CardContent>
 			<CardFooter className='p-4 pt-0'>
-				{book.status === "available" ? (
+				{book.status === true ? (
 					<Button
 						className='w-full bg-accent text-accent-foreground hover:bg-accent/90'
 						onClick={() => onCheckoutClick(book)}

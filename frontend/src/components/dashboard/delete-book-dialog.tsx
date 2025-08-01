@@ -38,7 +38,7 @@ export function DeleteBookDialog({ book, isOpen, onOpenChange, onConfirm }: Dele
         <AlertDialogFooter>
           <AlertDialogCancel>Cancel</AlertDialogCancel>
           <AlertDialogAction
-            onClick={() => onConfirm(book.id)}
+            onClick={() => onConfirm(book._id)}
             className={buttonVariants({ variant: "destructive" })}
           >
             Delete Book

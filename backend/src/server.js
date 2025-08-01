@@ -132,3 +132,29 @@ app.listen(PORT, () => {
 	console.log(`Server running on http://localhost:${PORT}`)
 	console.log(`Swagger docs at http://localhost:${PORT}/api-docs`)
 })
+
+
+app.patch("/api/books/update-book/:id", async (req, res) => {
+	console.log("Incoming:", req.method, req.url)
+	try{
+	const bookId= req.params.id
+		console.log("Updating book with ID:", bookId)
+		
+	const updates = req.body
+		console.log("Updates:", updates)
+
+		// Validate bookId
+
+if (!bookId) return res.status(400).json({ error: "Book ID is required" })
+
+		const Book = await book.findByIdAndUpdate(bookId, updates, {
+			new: true,
+			runValidators: true,
+		})
+		if (!Book) return res.status(404).json({ error: "Book not found" })
+		res.json(Book)
+	} catch (e) {
+		console.error("Error updating book:", e)
+		res.status(500).json({ error: "Server error" })
+	}
+})

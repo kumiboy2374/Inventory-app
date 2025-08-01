@@ -8,6 +8,8 @@ const bookSchema = new mongoose.Schema(
 		barcode: { type: String, required: true },
 		lessonNumber: { type: Number, required: false },
 		copyNumber: { type: Number, required: true },
+		status: { type: Boolean, default: true }, // true for available, false for lent
+		studentName: { type: String, required: false },
 	},
 	{ timestamps: true }
 )

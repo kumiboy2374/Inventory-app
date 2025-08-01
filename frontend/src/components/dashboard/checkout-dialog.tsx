@@ -35,7 +35,7 @@ export function CheckoutDialog({ book, isOpen, onOpenChange, onCheckout }: Check
       return;
     }
     if (book) {
-      onCheckout(book.id, studentName);
+      onCheckout(book._id, studentName);
       onOpenChange(false);
     }
   };

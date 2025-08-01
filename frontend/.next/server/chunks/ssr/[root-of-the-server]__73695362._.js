@@ -101,7 +101,7 @@ function BandSummary({ books, visibleBands }) {
     const summaryData = visibleBands.map((band)=>{
         const bandBooks = books.filter((b)=>b.band === band);
         const total = bandBooks.length;
-        const lent = bandBooks.filter((b)=>b.status === 'lent').length;
+        const lent = bandBooks.filter((b)=>b.status === false).length;
         const available = total - lent;
         return {
             band,
@@ -643,7 +643,7 @@ function BookCard({ book, canManageBooks, onCheckoutClick, onCheckinClick, onEdi
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "absolute top-2 right-2 flex items-center gap-2",
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$badge$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Badge"], {
-                                variant: book.status === "lent" ? "destructive" : "secondary",
+                                variant: book.status === false ? "destructive" : "secondary",
                                 className: "capitalize",
                                 children: book.status
                             }, void 0, false, {
@@ -819,7 +819,7 @@ function BookCard({ book, canManageBooks, onCheckoutClick, onCheckinClick, onEdi
                                 lineNumber: 89,
                                 columnNumber: 6
                             }, this),
-                            book.status === "lent" && book.studentName && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            book.status === false && book.studentName && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: "flex items-center pt-1 text-foreground",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$user$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__User$3e$__["User"], {
@@ -856,7 +856,7 @@ function BookCard({ book, canManageBooks, onCheckoutClick, onCheckinClick, onEdi
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["CardFooter"], {
                 className: "p-4 pt-0",
-                children: book.status === "available" ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
+                children: book.status === true ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
                     className: "w-full bg-accent text-accent-foreground hover:bg-accent/90",
                     onClick: ()=>onCheckoutClick(book),
                     children: [
@@ -987,7 +987,7 @@ function BookListItem({ book, canManageBooks, onCheckoutClick, onCheckinClick, o
                             lineNumber: 48,
                             columnNumber: 6
                         }, this),
-                        book.status === "lent" && book.studentName && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        book.status === false && book.studentName && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "flex items-center text-sm text-foreground",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$user$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__User$3e$__["User"], {
@@ -1029,7 +1029,7 @@ function BookListItem({ book, canManageBooks, onCheckoutClick, onCheckinClick, o
                     className: "flex items-center gap-4 ml-auto flex-shrink-0 w-full sm:w-auto pt-4 sm:pt-0 mt-4 sm:mt-0 border-t sm:border-none",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$badge$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Badge"], {
-                            variant: book.status === "lent" ? "destructive" : "secondary",
+                            variant: book.status === false ? "destructive" : "secondary",
                             className: "capitalize",
                             children: book.status
                         }, void 0, false, {
@@ -1044,7 +1044,7 @@ function BookListItem({ book, canManageBooks, onCheckoutClick, onCheckinClick, o
                             lineNumber: 68,
                             columnNumber: 6
                         }, this),
-                        book.status === "available" ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
+                        book.status === true ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
                             size: "sm",
                             className: "bg-accent text-accent-foreground hover:bg-accent/90 w-full sm:w-auto",
                             onClick: ()=>onCheckoutClick(book),
@@ -1405,7 +1405,7 @@ function CheckoutDialog({ book, isOpen, onOpenChange, onCheckout }) {
             return;
         }
         if (book) {
-            onCheckout(book.id, studentName);
+            onCheckout(book._id, studentName);
             onOpenChange(false);
         }
     };
@@ -1878,7 +1878,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$hook$2d$form$2f$dist$2f$index$2e$esm$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/react-hook-form/dist/index.esm.mjs [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$hookform$2f$resolvers$2f$zod$2f$dist$2f$zod$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/@hookform/resolvers/zod/dist/zod.mjs [app-ssr] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zod$2f$lib$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/zod/lib/index.mjs [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zod$2f$v3$2f$types$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/zod/v3/types.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/ui/button.tsx [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$dialog$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/ui/dialog.tsx [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$form$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/ui/form.tsx [app-ssr] (ecmascript)");
@@ -1899,10 +1899,10 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$utils$2e$ts__$
 ;
 ;
 ;
-const bookFormSchema = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zod$2f$lib$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["object"])({
-    module: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zod$2f$lib$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["nativeEnum"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$enum$2f$module$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["MODULES"]),
-    barcode: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zod$2f$lib$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["string"])().min(1, "Barcode is required."),
-    band: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zod$2f$lib$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["enum"])([
+const bookFormSchema = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zod$2f$v3$2f$types$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["object"])({
+    module: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zod$2f$v3$2f$types$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["nativeEnum"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$enum$2f$module$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["MODULES"]),
+    barcode: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zod$2f$v3$2f$types$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["string"])().min(1, "Barcode is required."),
+    band: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zod$2f$v3$2f$types$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["enum"])([
         "A",
         "B",
         "C",
@@ -1912,8 +1912,8 @@ const bookFormSchema = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_
     ], {
         required_error: "Please select a band."
     }),
-    lessonNumber: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zod$2f$lib$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["coerce"].number().min(1, "Lesson number must be at least 1."),
-    copyNumber: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zod$2f$lib$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["coerce"].number().min(1, "Copy number must be at least 1.")
+    lessonNumber: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zod$2f$v3$2f$types$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["coerce"].number().min(1, "Lesson number must be at least 1."),
+    copyNumber: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zod$2f$v3$2f$types$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["coerce"].number().min(1, "Copy number must be at least 1.")
 });
 function BookFormDialog({ book, isOpen, onOpenChange, onSave }) {
     const form = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$hook$2d$form$2f$dist$2f$index$2e$esm$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useForm"])({
@@ -1952,7 +1952,7 @@ function BookFormDialog({ book, isOpen, onOpenChange, onSave }) {
     const onSubmit = (data)=>{
         const newBookData = {
             _id: book?._id || (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["generateId"])(),
-            status: book?.status || "available",
+            status: book?.status || true,
             studentName: book?.studentName,
             coverImage: book?.coverImage || `https://placehold.co/300x400.png`,
             ...data
@@ -2598,7 +2598,7 @@ function DeleteBookDialog({ book, isOpen, onOpenChange, onConfirm }) {
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$alert$2d$dialog$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["AlertDialogAction"], {
-                            onClick: ()=>onConfirm(book.id),
+                            onClick: ()=>onConfirm(book._id),
                             className: buttonVariants({
                                 variant: "destructive"
                             }),
@@ -2884,6 +2884,25 @@ function DashboardPage() {
         });
         return res;
     };
+    // const updateBook = async (bookId: string, updates : Partial<Book>) => {
+    // 	const res= await fetch(`/api/books/checkout/${bookId}`, {
+    // 		method: "PATCH",
+    // 		headers: {
+    // 			"Content-Type": "application/json",
+    // 		},
+    // 		body: JSON.stringify(  
+    // 			updates)
+    // 	})
+    // 	return res
+    // }
+    const updateBook = async (bookId, updates)=>{
+        const res = await bookApi.request({
+            method: "PATCH",
+            url: `/books/update-book/${bookId}`,
+            data: updates
+        });
+        return res;
+    };
     async function fetchBooks() {
         const res = await bookApi.request({
             method: "GET",
@@ -2904,6 +2923,8 @@ function DashboardPage() {
         console.log("Received in handleSaveBook:", bookData);
         if (editingBook) {
             // Editing existing book
+            updateBook(bookData._id, bookData) //update book in backend
+            ;
             setBooks((prevBooks)=>prevBooks.map((b)=>b._id === bookData._id ? bookData : b));
             toast({
                 title: "Success!",
@@ -2949,28 +2970,54 @@ function DashboardPage() {
             });
         });
     };
-    const handleCheckout = (bookId, studentName)=>{
-        setBooks((prevBooks)=>prevBooks.map((b)=>b._id === bookId ? {
-                    ...b,
-                    status: "lent",
-                    studentName: studentName
-                } : b));
-        toast({
-            title: "Success!",
-            description: `Book has been checked out to ${studentName}.`
-        });
+    const handleCheckout = async (bookId, Name)=>{
+        try {
+            await updateBook(bookId, {
+                status: false,
+                studentName: Name
+            });
+            setBooks((prevBooks)=>prevBooks.map((b)=>b._id === bookId ? {
+                        ...b,
+                        status: false,
+                        studentName: Name
+                    } : b));
+            toast({
+                title: "Success!",
+                description: `Book has been checked out to ${Name}.`
+            });
+        } catch (e) {
+            console.error("Error checking out book:", e);
+            toast({
+                title: "Error",
+                description: "Failed to check out book.",
+                variant: "destructive"
+            });
+        }
     };
-    const handleCheckin = (bookId)=>{
-        const bookToCheckIn = books.find((b)=>b._id === bookId) || checkoutBook;
-        setBooks((prevBooks)=>prevBooks.map((b)=>b._id === bookId ? {
-                    ...b,
-                    status: "available",
-                    studentName: undefined
-                } : b));
-        toast({
-            title: "Success!",
-            description: `"${bookToCheckIn?.module}" has been checked in.`
-        });
+    const handleCheckin = async (bookId)=>{
+        try {
+            await updateBook(bookId, {
+                status: true,
+                studentName: null
+            });
+            const bookToCheckIn = books.find((b)=>b._id === bookId) || checkoutBook;
+            setBooks((prevBooks)=>prevBooks.map((b)=>b._id === bookId ? {
+                        ...b,
+                        status: true,
+                        studentName: undefined
+                    } : b));
+            toast({
+                title: "Success!",
+                description: `"${bookToCheckIn?.module}" has been checked in.`
+            });
+        } catch (e) {
+            console.error("Error checking in book:", e);
+            toast({
+                title: "Error",
+                description: "Failed to check in book.",
+                variant: "destructive"
+            });
+        }
     };
     const filteredBooks = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useMemo"])(()=>{
         let booksToFilter = books;
@@ -2990,7 +3037,11 @@ function DashboardPage() {
     const visibleBands = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useMemo"])(()=>{
         if (user?.role === "main") return [
             "A",
-            "B"
+            "B",
+            "C",
+            "D",
+            "E",
+            "F"
         ];
         if (user?.role === "bandA") return [
             "A"
@@ -3013,27 +3064,27 @@ function DashboardPage() {
                             className: "h-[108px] w-full"
                         }, void 0, false, {
                             fileName: "[project]/src/app/dashboard/page.tsx",
-                            lineNumber: 166,
+                            lineNumber: 211,
                             columnNumber: 6
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$skeleton$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Skeleton"], {
                             className: "h-[108px] w-full"
                         }, void 0, false, {
                             fileName: "[project]/src/app/dashboard/page.tsx",
-                            lineNumber: 167,
+                            lineNumber: 212,
                             columnNumber: 6
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/dashboard/page.tsx",
-                    lineNumber: 165,
+                    lineNumber: 210,
                     columnNumber: 5
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$skeleton$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Skeleton"], {
                     className: "h-10 w-full"
                 }, void 0, false, {
                     fileName: "[project]/src/app/dashboard/page.tsx",
-                    lineNumber: 169,
+                    lineNumber: 214,
                     columnNumber: 5
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3044,18 +3095,18 @@ function DashboardPage() {
                             className: "h-[350px] w-full rounded-lg"
                         }, i, false, {
                             fileName: "[project]/src/app/dashboard/page.tsx",
-                            lineNumber: 172,
+                            lineNumber: 217,
                             columnNumber: 7
                         }, this))
                 }, void 0, false, {
                     fileName: "[project]/src/app/dashboard/page.tsx",
-                    lineNumber: 170,
+                    lineNumber: 215,
                     columnNumber: 5
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/src/app/dashboard/page.tsx",
-            lineNumber: 164,
+            lineNumber: 209,
             columnNumber: 4
         }, this);
     }
@@ -3067,7 +3118,7 @@ function DashboardPage() {
                 visibleBands: visibleBands
             }, void 0, false, {
                 fileName: "[project]/src/app/dashboard/page.tsx",
-                lineNumber: 181,
+                lineNumber: 226,
                 columnNumber: 4
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$dashboard$2f$filter$2d$controls$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["FilterControls"], {
@@ -3079,7 +3130,7 @@ function DashboardPage() {
                 onAddBookClick: ()=>setEditingBook(null)
             }, void 0, false, {
                 fileName: "[project]/src/app/dashboard/page.tsx",
-                lineNumber: 183,
+                lineNumber: 228,
                 columnNumber: 4
             }, this),
             filteredBooks.length > 0 ? layout === "grid" ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3093,12 +3144,12 @@ function DashboardPage() {
                         onDeleteClick: ()=>setDeletingBook(book)
                     }, book._id, false, {
                         fileName: "[project]/src/app/dashboard/page.tsx",
-                        lineNumber: 196,
+                        lineNumber: 241,
                         columnNumber: 8
                     }, this))
             }, void 0, false, {
                 fileName: "[project]/src/app/dashboard/page.tsx",
-                lineNumber: 194,
+                lineNumber: 239,
                 columnNumber: 6
             }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "space-y-4",
@@ -3111,12 +3162,12 @@ function DashboardPage() {
                         onDeleteClick: ()=>setDeletingBook(book)
                     }, book._id, false, {
                         fileName: "[project]/src/app/dashboard/page.tsx",
-                        lineNumber: 210,
+                        lineNumber: 255,
                         columnNumber: 8
                     }, this))
             }, void 0, false, {
                 fileName: "[project]/src/app/dashboard/page.tsx",
-                lineNumber: 208,
+                lineNumber: 253,
                 columnNumber: 6
             }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "flex flex-col items-center justify-center rounded-xl border-2 border-dashed border-muted-foreground/30 bg-muted/50 text-center py-16 text-muted-foreground",
@@ -3125,7 +3176,7 @@ function DashboardPage() {
                         className: "h-12 w-12 mb-4"
                     }, void 0, false, {
                         fileName: "[project]/src/app/dashboard/page.tsx",
-                        lineNumber: 224,
+                        lineNumber: 269,
                         columnNumber: 6
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -3133,20 +3184,20 @@ function DashboardPage() {
                         children: "No books found"
                     }, void 0, false, {
                         fileName: "[project]/src/app/dashboard/page.tsx",
-                        lineNumber: 225,
+                        lineNumber: 270,
                         columnNumber: 6
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                         children: "Try adjusting your search query."
                     }, void 0, false, {
                         fileName: "[project]/src/app/dashboard/page.tsx",
-                        lineNumber: 226,
+                        lineNumber: 271,
                         columnNumber: 6
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/dashboard/page.tsx",
-                lineNumber: 223,
+                lineNumber: 268,
                 columnNumber: 5
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$dashboard$2f$checkout$2d$dialog$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["CheckoutDialog"], {
@@ -3156,7 +3207,7 @@ function DashboardPage() {
                 onCheckout: handleCheckout
             }, void 0, false, {
                 fileName: "[project]/src/app/dashboard/page.tsx",
-                lineNumber: 230,
+                lineNumber: 275,
                 columnNumber: 4
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$dashboard$2f$book$2d$form$2d$dialog$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["BookFormDialog"], {
@@ -3166,7 +3217,7 @@ function DashboardPage() {
                 onSave: handleSaveBook
             }, void 0, false, {
                 fileName: "[project]/src/app/dashboard/page.tsx",
-                lineNumber: 237,
+                lineNumber: 282,
                 columnNumber: 4
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$dashboard$2f$delete$2d$book$2d$dialog$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["DeleteBookDialog"], {
@@ -3176,13 +3227,13 @@ function DashboardPage() {
                 onConfirm: handleDeleteBook
             }, void 0, false, {
                 fileName: "[project]/src/app/dashboard/page.tsx",
-                lineNumber: 244,
+                lineNumber: 289,
                 columnNumber: 4
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/dashboard/page.tsx",
-        lineNumber: 180,
+        lineNumber: 225,
         columnNumber: 3
     }, this);
 }

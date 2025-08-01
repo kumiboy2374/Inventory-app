@@ -86,7 +86,7 @@ export function BookFormDialog({ book, isOpen, onOpenChange, onSave }: BookFormD
 	const onSubmit = (data: BookFormValues) => {
 		const newBookData: Book = {
 			_id: book?._id || generateId(),
-			status: book?.status || "available",
+			status: book?.status || true,
 			studentName: book?.studentName,
 			coverImage: book?.coverImage || `https://placehold.co/300x400.png`,
 			...data,

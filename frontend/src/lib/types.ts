@@ -7,8 +7,8 @@ export type Book = {
 	band: "A" | "B" | "C" | "D" | "E" | "F"
 	copyNumber: number
 	lessonNumber: number
-	status: "available" | "lent"
-	studentName?: string
+	status: boolean
+	studentName?: string | null
 	coverImage: string
 }
 

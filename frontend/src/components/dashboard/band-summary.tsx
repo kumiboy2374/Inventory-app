@@ -4,14 +4,14 @@ import { Library, CheckCircle2, XCircle } from 'lucide-react';
 
 interface BandSummaryProps {
   books: Book[];
-  visibleBands: ('A' | 'B')[];
+  visibleBands: ('A' | 'B' | 'C'| 'D' | 'E' | 'F')[];
 }
 
 export function BandSummary({ books, visibleBands }: BandSummaryProps) {
   const summaryData = visibleBands.map(band => {
     const bandBooks = books.filter(b => b.band === band);
     const total = bandBooks.length;
-    const lent = bandBooks.filter(b => b.status === 'lent').length;
+    const lent = bandBooks.filter(b => b.status === false).length;
     const available = total - lent;
     return { band, total, lent, available };
   });

@@ -11,7 +11,7 @@ import { BookFormDialog } from "@/components/dashboard/book-form-dialog"
 import { DeleteBookDialog } from "@/components/dashboard/delete-book-dialog"
 import { useToast } from "@/hooks/use-toast"
 import { Skeleton } from "@/components/ui/skeleton"
-import { BookOpen } from "lucide-react"
+import {BookOpen } from "lucide-react"
 import useApi from "@/hooks/use-api"
 
 export default function DashboardPage() {
@@ -50,6 +50,30 @@ export default function DashboardPage() {
 		return res
 	}
 
+	// const updateBook = async (bookId: string, updates : Partial<Book>) => {
+	// 	const res= await fetch(`/api/books/checkout/${bookId}`, {
+	// 		method: "PATCH",
+	// 		headers: {
+	// 			"Content-Type": "application/json",
+	// 		},
+	// 		body: JSON.stringify(  
+	// 			updates)
+	// 	})
+
+	// 	return res
+	// }
+
+	const updateBook = async (bookId: string, updates: Partial<Book>) => {
+    const res = await bookApi.request({
+        method: "PATCH",
+        url: `/books/update-book/${bookId}`,
+        data: updates,
+    })
+	
+	return res
+}
+
+
 	async function fetchBooks() {
 		const res = await bookApi.request({ method: "GET", url: "/books" })
 		setBooks(res.data)
@@ -72,6 +96,7 @@ export default function DashboardPage() {
 		console.log("Received in handleSaveBook:", bookData)
 		if (editingBook) {
 			// Editing existing book
+			updateBook(bookData._id, bookData)			//update book in backend
 			setBooks((prevBooks) => prevBooks.map((b) => (b._id === bookData._id ? bookData : b)))
 			toast({ title: "Success!", description: "Book has been updated." })
 		} else {
@@ -107,30 +132,50 @@ export default function DashboardPage() {
 			})
 	}
 
-	const handleCheckout = (bookId: string, studentName: string) => {
+	const handleCheckout = async (bookId: string, Name: string) => {
+		try{
+		await updateBook(bookId, {status: false, studentName: Name})
 		setBooks((prevBooks) =>
 			prevBooks.map((b) =>
-				b._id === bookId ? { ...b, status: "lent", studentName: studentName } : b
+				b._id === bookId ? { ...b, status: false, studentName: Name } : b
 			)
 		)
 		toast({
 			title: "Success!",
-			description: `Book has been checked out to ${studentName}.`,
-		})
+			description: `Book has been checked out to ${Name}.`,
+		})}catch(e){
+			console.error("Error checking out book:", e)
+			toast({
+				title: "Error",
+				description: "Failed to check out book.",
+				variant: "destructive",
+			})
+		}
 	}
 
-	const handleCheckin = (bookId: string) => {
+	const handleCheckin = async (bookId: string) => {
+		try{
+			await updateBook(bookId,{status: true, studentName: null})
+		
 		const bookToCheckIn = books.find((b) => b._id === bookId) || checkoutBook
 		setBooks((prevBooks) =>
 			prevBooks.map((b) =>
-				b._id === bookId ? { ...b, status: "available", studentName: undefined } : b
+				b._id === bookId ? { ...b, status: true, studentName: undefined } : b
 			)
 		)
 		toast({
 			title: "Success!",
 			description: `"${bookToCheckIn?.module}" has been checked in.`,
 		})
+	}catch(e){
+		console.error("Error checking in book:", e)
+		toast({
+			title: "Error",
+			description: "Failed to check in book.",
+			variant: "destructive",
+		})
 	}
+}
 
 	const filteredBooks = useMemo(() => {
 		let booksToFilter = books
@@ -153,7 +198,7 @@ export default function DashboardPage() {
 	}, [books, searchQuery, user])
 
 	const visibleBands = useMemo(() => {
-		if (user?.role === "main") return ["A", "B"] as ("A" | "B")[]
+		if (user?.role === "main") return ["A", "B", "C", "D", "E", "F"] as ("A" | "B" |"C" | "D" | "E" | "F")[]
 		if (user?.role === "bandA") return ["A"] as ("A" | "B")[]
 		if (user?.role === "bandB") return ["B"] as ("A" | "B")[]
 		return []

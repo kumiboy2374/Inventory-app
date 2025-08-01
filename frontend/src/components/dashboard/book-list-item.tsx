@@ -49,7 +49,7 @@ export function BookListItem({
 						Lesson {book.lessonNumber}, Copy {book.copyNumber} &bull; Band {book.band} &bull;
 						Barcode: {book.barcode}
 					</p>
-					{book.status === "lent" && book.studentName && (
+					{book.status === false && book.studentName && (
 						<div className='flex items-center text-sm text-foreground'>
 							<User className='w-3 h-3 mr-1.5 text-muted-foreground' />
 							<span>
@@ -60,13 +60,13 @@ export function BookListItem({
 				</div>
 				<div className='flex items-center gap-4 ml-auto flex-shrink-0 w-full sm:w-auto pt-4 sm:pt-0 mt-4 sm:mt-0 border-t sm:border-none'>
 					<Badge
-						variant={book.status === "lent" ? "destructive" : "secondary"}
+						variant={book.status === false ? "destructive" : "secondary"}
 						className='capitalize'
 					>
 						{book.status}
 					</Badge>
 					<div className='flex-grow sm:flex-grow-0'></div>
-					{book.status === "available" ? (
+					{book.status === true ? (
 						<Button
 							size='sm'
 							className='bg-accent text-accent-foreground hover:bg-accent/90 w-full sm:w-auto'
