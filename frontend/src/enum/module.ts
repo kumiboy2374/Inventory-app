@@ -17,3 +17,16 @@ export const formatModule = (mod: MODULES) => {
 			return "7&8 - Societal Wellbeing, The Hereafter - Return to The Creator"
 	}
 }
+
+export const formatModule1 = (mod: MODULES) => {
+	switch (mod) {
+		case 1:
+			return "1&2"
+		case 2:
+			return "3&4"
+		case 3:
+			return "5&6"
+		case 4:
+			return "7&8"
+	}
+}

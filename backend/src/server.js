@@ -1,8 +1,14 @@
+// console.log('Running file:', __filename);
+
 require("./config/dbconfig.js")
+require("./config/next.config.js")
 const express = require("express")
 const swaggerUi = require("swagger-ui-express")
 const swaggerJsdoc = require("swagger-jsdoc")
 const book = require("./models/book.js")
+
+// console.log('Loaded MONGO_URI:', process.env.MONGO_URI);
+
 
 const app = express()
 const cors = require("cors")
@@ -109,12 +115,40 @@ app.get("/api/books", async (_req, res) => {
 	}
 })
 
+
+const fs = require('fs');
 app.delete("/api/books/delete-book", async (req, res) => {
 	console.log("Deleting book:", req.body)
 	try {
 		const bookId = req.body.id
 
 		if (!bookId) return res.status(400).json({ error: "Book ID is required" })
+
+
+
+    // Find the book first to get its coverImage path
+    const bookToDelete = await book.findById(bookId);
+    if (!bookToDelete) return res.status(404).json({ error: "Book not found" });
+
+
+console.log(bookToDelete._id);
+    // If the book has a coverImage and it’s a local file, delete it
+    if (bookToDelete.coverImage) {
+      // Assuming coverImage is a URL like 'http://localhost:3000/uploads/filename.jpg'
+      const filename = bookToDelete.coverImage.split('/').pop();
+      const filepath = path.join(__dirname, 'uploads', filename);
+
+      fs.unlink(filepath, (err) => {
+        if (err) {
+          console.error("Failed to delete image file:", err);
+          // You can choose to continue or return error here
+        } else {
+          console.log("Deleted image file:", filename);
+        }
+      });
+    }
+
+
 
 		const deletedBook = await book.findByIdAndDelete(bookId)
 
@@ -158,3 +192,30 @@ if (!bookId) return res.status(400).json({ error: "Book ID is required" })
 		res.status(500).json({ error: "Server error" })
 	}
 })
+
+
+const upload = require('./multer'); // import multer instance
+const path = require('path');
+
+// ... your other middleware, routes, etc.
+
+app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
+
+// Add the upload route here:
+app.post('/upload', upload.single('coverImage'), (req, res) => {
+  if (!req.file) return res.status(400).json({ error: 'No file uploaded' });
+
+  res.json({
+    message: 'File uploaded!',
+    filename: req.file.filename,
+    path: req.file.path,
+  });
+});
+
+app.listen(PORT, () => {
+  console.log(`Server running on http://localhost:${PORT}`);
+});
+
+app.post('/upload', upload.single('coverImage'), (req, res) => {
+  // handle upload
+});

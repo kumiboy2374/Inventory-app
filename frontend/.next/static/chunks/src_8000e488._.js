@@ -396,15 +396,15 @@ __turbopack_context__.s({
 const mockUsers = [
     {
         username: "admin",
-        role: "main"
+        role: "Main"
     },
     {
         username: "teacherA",
-        role: "bandA"
+        role: "Band A"
     },
     {
         username: "teacherB",
-        role: "bandB"
+        role: "Band B"
     }
 ];
 if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {

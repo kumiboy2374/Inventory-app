@@ -1,7 +1,7 @@
 import type { User } from "./types"
 
 export const mockUsers: User[] = [
-	{ username: "admin", role: "main" },
-	{ username: "teacherA", role: "bandA" },
-	{ username: "teacherB", role: "bandB" },
+	{ username: "admin", role: "Main" },
+	{ username: "teacherA", role: "Band A" },
+	{ username: "teacherB", role: "Band B" },
 ]

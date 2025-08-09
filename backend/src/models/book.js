@@ -10,6 +10,7 @@ const bookSchema = new mongoose.Schema(
 		copyNumber: { type: Number, required: true },
 		status: { type: Boolean, default: true }, // true for available, false for lent
 		studentName: { type: String, required: false },
+		coverImage: { type: String, required: true}
 	},
 	{ timestamps: true }
 )

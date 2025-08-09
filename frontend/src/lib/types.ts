@@ -12,7 +12,7 @@ export type Book = {
 	coverImage: string
 }
 
-export type UserRole = "main" | "bandA" | "bandB"
+export type UserRole = "Main" | "Band A" | "Band B"
 
 export type User = {
 	username: string

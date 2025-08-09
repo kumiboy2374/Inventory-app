@@ -36,6 +36,7 @@ import { generateId } from "@/lib/utils"
 
 const bookFormSchema = z.object({
 	module: z.nativeEnum(MODULES),
+	coverImage: z.string(),
 	barcode: z.string().min(1, "Barcode is required."),
 	band: z.enum(["A", "B", "C", "D", "E", "F"], { required_error: "Please select a band." }),
 	lessonNumber: z.coerce.number().min(1, "Lesson number must be at least 1."),
@@ -56,6 +57,7 @@ export function BookFormDialog({ book, isOpen, onOpenChange, onSave }: BookFormD
 		resolver: zodResolver(bookFormSchema),
 		defaultValues: {
 			module: 1 as MODULES,
+			coverImage:`https://placehold.co/300x400.png` ,
 			barcode: "",
 			band: "A",
 			lessonNumber: 1,
@@ -67,6 +69,7 @@ export function BookFormDialog({ book, isOpen, onOpenChange, onSave }: BookFormD
 		if (book) {
 			form.reset({
 				module: book.module,
+				coverImage: book.coverImage,
 				barcode: book.barcode,
 				band: book.band,
 				lessonNumber: book.lessonNumber,
@@ -75,6 +78,7 @@ export function BookFormDialog({ book, isOpen, onOpenChange, onSave }: BookFormD
 		} else {
 			form.reset({
 				module: 1 as MODULES,
+				coverImage: `https://placehold.co/300x400.png`,
 				barcode: "",
 				band: "A",
 				lessonNumber: 1,
@@ -88,7 +92,7 @@ export function BookFormDialog({ book, isOpen, onOpenChange, onSave }: BookFormD
 			_id: book?._id || generateId(),
 			status: book?.status || true,
 			studentName: book?.studentName,
-			coverImage: book?.coverImage || `https://placehold.co/300x400.png`,
+			//coverImage: book?.coverImage || `https://placehold.co/300x400.png`,
 			...data,
 		}
 		onSave(newBookData)
@@ -98,6 +102,11 @@ export function BookFormDialog({ book, isOpen, onOpenChange, onSave }: BookFormD
 	const isEditing = book !== null
 
 	const band = form.watch("band")
+const fileToBase64 = (file: File, callback :  (base64: String) => void) => {
+  const reader = new FileReader();
+  reader.onloadend = () => {callback(reader.result as String);};
+  reader.readAsDataURL(file);
+};
 
 	return (
 		<Dialog open={isOpen} onOpenChange={onOpenChange}>
@@ -157,6 +166,61 @@ export function BookFormDialog({ book, isOpen, onOpenChange, onSave }: BookFormD
 								</FormItem>
 							)}
 						/>
+					<FormField
+  control={form.control}
+  name="coverImage"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>Cover Image</FormLabel>
+      <FormControl>
+        <input
+          type="file"
+          accept="image/*"
+          capture="environment"
+          onChange={async (e) => {
+            const file = e.target.files?.[0];
+            if (file) {
+              // Prepare formData for upload
+              const formData = new FormData();
+              formData.append("coverImage", file);
+
+              try {
+                // Upload the file immediately
+                const res = await fetch("http://localhost:3000/upload", {
+                  method: "POST",
+                  body: formData,
+                });
+
+                if (!res.ok) throw new Error("Upload failed");
+
+                const data = await res.json();
+
+                // Store uploaded file path or URL in the form
+                // For example, store the URL to display or send later
+                const imageUrl = `http://localhost:3000/uploads/${data.filename}`;
+                field.onChange(imageUrl);
+              } catch (err) {
+                console.error("Image upload error:", err);
+                // Optionally, reset the input or notify user
+                field.onChange(""); 
+              }
+            }
+          }}
+        />
+      </FormControl>
+      {/* Show preview if coverImage has a URL */}
+      {field.value && (
+        <img
+          src={field.value}
+          alt="Cover preview"
+          style={{ marginTop: 8, maxWidth: 150, maxHeight: 200 }}
+        />
+      )}
+      <FormMessage />
+    </FormItem>
+  )}
+/>
+
 						<div className='grid grid-cols-3 gap-4'>
 							<FormField
 								control={form.control}

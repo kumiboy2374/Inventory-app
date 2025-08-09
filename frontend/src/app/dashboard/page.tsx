@@ -50,19 +50,6 @@ export default function DashboardPage() {
 		return res
 	}
 
-	// const updateBook = async (bookId: string, updates : Partial<Book>) => {
-	// 	const res= await fetch(`/api/books/checkout/${bookId}`, {
-	// 		method: "PATCH",
-	// 		headers: {
-	// 			"Content-Type": "application/json",
-	// 		},
-	// 		body: JSON.stringify(  
-	// 			updates)
-	// 	})
-
-	// 	return res
-	// }
-
 	const updateBook = async (bookId: string, updates: Partial<Book>) => {
     const res = await bookApi.request({
         method: "PATCH",
@@ -122,7 +109,7 @@ export default function DashboardPage() {
 		deleteBook(bookToDelete._id)
 			.then(() => {
 				setBooks((prevBooks) => prevBooks.filter((b) => b._id !== bookId))
-				toast({ title: "Success!", description: `"${bookToDelete.module}" has been deleted.` })
+				toast({ title: "Success!", description: `${bookToDelete.barcode} has been deleted.` })
 				setDeletingBook(null)
 				fetchBooks()
 			})
@@ -131,7 +118,7 @@ export default function DashboardPage() {
 				toast({ title: "Error", description: "Failed to delete book.", variant: "destructive" })
 			})
 	}
-
+ 
 	const handleCheckout = async (bookId: string, Name: string) => {
 		try{
 		await updateBook(bookId, {status: false, studentName: Name})
@@ -179,9 +166,9 @@ export default function DashboardPage() {
 
 	const filteredBooks = useMemo(() => {
 		let booksToFilter = books
-		if (user?.role === "bandA") {
+		if (user?.role === "Band A") {
 			booksToFilter = books.filter((b) => b.band === "A")
-		} else if (user?.role === "bandB") {
+		} else if (user?.role === "Band B") {
 			booksToFilter = books.filter((b) => b.band === "B")
 		}
 		if (!searchQuery) return booksToFilter
@@ -196,11 +183,12 @@ export default function DashboardPage() {
 				book.studentName?.toLowerCase().includes(lowercasedQuery)
 		)
 	}, [books, searchQuery, user])
+const visibleModules: (1 | 2 | 3 | 4)[] = [1, 2, 3, 4];
 
 	const visibleBands = useMemo(() => {
-		if (user?.role === "main") return ["A", "B", "C", "D", "E", "F"] as ("A" | "B" |"C" | "D" | "E" | "F")[]
-		if (user?.role === "bandA") return ["A"] as ("A" | "B")[]
-		if (user?.role === "bandB") return ["B"] as ("A" | "B")[]
+		if (user?.role === "Main") return ["A", "B", "C", "D", "E", "F"] as ("A" | "B" |"C" | "D" | "E" | "F")[]
+		if (user?.role === "Band A") return ["A"] as ("A" | "B")[]
+		if (user?.role === "Band B") return ["B"] as ("A" | "B")[]
 		return []
 	}, [user])
 
@@ -223,14 +211,14 @@ export default function DashboardPage() {
 
 	return (
 		<div className='space-y-8'>
-			<BandSummary books={books} visibleBands={visibleBands} />
+			<BandSummary books={books} visibleBands={visibleBands} visibleModules={visibleModules} />
 
 			<FilterControls
 				searchQuery={searchQuery}
 				setSearchQuery={setSearchQuery}
 				layout={layout}
 				setLayout={setLayout}
-				canManageBooks={user?.role === "main"}
+				canManageBooks={user?.role === "Main"}
 				onAddBookClick={() => setEditingBook(null)}
 			/>
 
@@ -241,7 +229,7 @@ export default function DashboardPage() {
 							<BookCard
 								key={book._id}
 								book={book}
-								canManageBooks={user?.role === "main"}
+								canManageBooks={user?.role === "Main"}
 								onCheckoutClick={() => setCheckoutBook(book)}
 								onCheckinClick={handleCheckin}
 								onEditClick={() => setEditingBook(book)}
@@ -255,7 +243,7 @@ export default function DashboardPage() {
 							<BookListItem
 								key={book._id}
 								book={book}
-								canManageBooks={user?.role === "main"}
+								canManageBooks={user?.role === "Main"}
 								onCheckoutClick={() => setCheckoutBook(book)}
 								onCheckinClick={handleCheckin}
 								onEditClick={() => setEditingBook(book)}

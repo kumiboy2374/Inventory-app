@@ -1,24 +1,33 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { formatModule, formatModule1 } from '@/enum/module';
 import type { Book } from '@/lib/types';
 import { Library, CheckCircle2, XCircle } from 'lucide-react';
 
 interface BandSummaryProps {
   books: Book[];
   visibleBands: ('A' | 'B' | 'C'| 'D' | 'E' | 'F')[];
+  visibleModules: (1|2|3|4)[];
 }
 
-export function BandSummary({ books, visibleBands }: BandSummaryProps) {
-  const summaryData = visibleBands.map(band => {
-    const bandBooks = books.filter(b => b.band === band);
-    const total = bandBooks.length;
-    const lent = bandBooks.filter(b => b.status === false).length;
-    const available = total - lent;
-    return { band, total, lent, available };
+export function BandSummary({ books, visibleBands, visibleModules }: BandSummaryProps) {
+const summaryData = visibleBands.map(band => {
+  const bandBooks = books.filter(b => b.band === band);
+  const total = bandBooks.length;
+  const lent = bandBooks.filter(b => b.status === false).length;
+  const available = total - lent;
+
+  // Module summaries for this band
+  const modulesSummary = visibleModules.map(module => {
+    const moduleCount = bandBooks.filter(b => Number(b.module) === module).length;
+    return { module, count: moduleCount };
   });
+ 
+  return { band, total, lent, available, modulesSummary };
+});
 
   return (
     <div className="grid gap-4 md:grid-cols-2">
-      {summaryData.map(({ band, total, lent, available }) => (
+      {summaryData.map(({ band, total, lent, available,modulesSummary }) => (
         <Card key={band}>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium font-headline">Band {band} Summary</CardTitle>
@@ -34,7 +43,15 @@ export function BandSummary({ books, visibleBands }: BandSummaryProps) {
               <div className="flex items-center ml-4">
                   <XCircle className="h-3 w-3 mr-1 text-destructive" />
                   {lent} Lent Out
-              </div>
+                  </div>
+                  </div>
+              <div className="flex flex-wrap mt-2 text-xs text-muted-foreground -ml-4">
+                {modulesSummary.map(({ module, count }) => (
+                <div key={module} className="flex items-center ml-4">
+                  <Library className="h-3 w-3 mr-1 text-muted-foreground" />
+                  {count} in Module {formatModule1(module)}
+                </div>
+              ))}
             </div>
           </CardContent>
         </Card>
