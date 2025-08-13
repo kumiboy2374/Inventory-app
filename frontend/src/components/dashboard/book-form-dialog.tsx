@@ -36,7 +36,7 @@ import { generateId } from "@/lib/utils"
 
 const bookFormSchema = z.object({
 	module: z.nativeEnum(MODULES),
-	coverImage: z.string(),
+	coverImage: z.string().url().optional(),
 	barcode: z.string().min(1, "Barcode is required."),
 	band: z.enum(["A", "B", "C", "D", "E", "F"], { required_error: "Please select a band." }),
 	lessonNumber: z.coerce.number().min(1, "Lesson number must be at least 1."),
@@ -92,7 +92,7 @@ export function BookFormDialog({ book, isOpen, onOpenChange, onSave }: BookFormD
 			_id: book?._id || generateId(),
 			status: book?.status || true,
 			studentName: book?.studentName,
-			//coverImage: book?.coverImage || `https://placehold.co/300x400.png`,
+			coverImage: book?.coverImage || `https://placehold.co/300x400.png`,
 			...data,
 		}
 		onSave(newBookData)
@@ -166,7 +166,7 @@ const fileToBase64 = (file: File, callback :  (base64: String) => void) => {
 								</FormItem>
 							)}
 						/>
-					<FormField
+					{/* <FormField
   control={form.control}
   name="coverImage"
   render={({ field }) => (
@@ -207,9 +207,9 @@ const fileToBase64 = (file: File, callback :  (base64: String) => void) => {
             }
           }}
         />
-      </FormControl>
+      </FormControl> */}
       {/* Show preview if coverImage has a URL */}
-      {field.value && (
+      {/* {field.value && (
         <img
           src={field.value}
           alt="Cover preview"
@@ -219,9 +219,12 @@ const fileToBase64 = (file: File, callback :  (base64: String) => void) => {
       <FormMessage />
     </FormItem>
   )}
-/>
+/> */}
 
 						<div className='grid grid-cols-3 gap-4'>
+							
+							
+							
 							<FormField
 								control={form.control}
 								name='band'

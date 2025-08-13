@@ -1,7 +1,6 @@
 // console.log('Running file:', __filename);
 
 require("./config/dbconfig.js")
-require("./config/next.config.js")
 const express = require("express")
 const swaggerUi = require("swagger-ui-express")
 const swaggerJsdoc = require("swagger-jsdoc")
@@ -193,29 +192,3 @@ if (!bookId) return res.status(400).json({ error: "Book ID is required" })
 	}
 })
 
-
-const upload = require('./multer'); // import multer instance
-const path = require('path');
-
-// ... your other middleware, routes, etc.
-
-app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
-
-// Add the upload route here:
-app.post('/upload', upload.single('coverImage'), (req, res) => {
-  if (!req.file) return res.status(400).json({ error: 'No file uploaded' });
-
-  res.json({
-    message: 'File uploaded!',
-    filename: req.file.filename,
-    path: req.file.path,
-  });
-});
-
-app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
-});
-
-app.post('/upload', upload.single('coverImage'), (req, res) => {
-  // handle upload
-});

@@ -83,7 +83,8 @@ export function BookCard({
 				</div>
 				<div className='text-sm text-muted-foreground space-y-1'>
 					<p>
-						Lesson {book.lessonNumber}, Copy {book.copyNumber}
+						{(book.band === "A" || book.band === "B") && (<>Lesson: {book.lessonNumber} <br/></>)}
+						Copy: {book.copyNumber}
 					</p>
 					<p>Band: {book.band}</p>
 					<p>Barcode: {book.barcode}</p>
